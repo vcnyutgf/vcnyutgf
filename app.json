@@ -1,18 +1,31 @@
-{
-    "name": "V2Ray",
-    "description": "Deploy V2ray VLESS on Heroku.",
-    "keywords": ["V2Ray"],
-    "env": {
-        "ID": {
-            "description": "UUID",
-            "value": "ad806487-2d26-4636-98b6-ab85cc8521f7"
-        },
-        "WSPATH": {
-            "description": "WebSocket Path",
-            "value": "/"
-        }
+﻿{
+  "name": "vmess or vless",
+  "description": "vmess or vless",
+  "keywords": [
+    "vmess or vless"
+  ],
+  "env": {
+    "PROTOCOL": {
+      "description": "要部署的协议vmess或vless,请填小写的vmess或vless",
+      "value": "vmess",
+      "required": true
     },
-    "website": "https://ibcl.us/Heroku-V2Ray_20191014/",
-    "repository": "https://github.com/bclswl0827/v2ray-heroku/tree/vless",
-    "stack": "container"
+    "UUID": {
+      "description": "UUID充当配置的路径和账号密码,请妥善保存,可生成UUID的网站: https://www.uuidgenerator.net",
+      "value": "",
+      "required": false
+    },
+    "vindex": {
+      "description": "伪装网站，填写一个真实网站地址",
+      "value": "",
+      "required": false
+    }
+   
+  },
+  "website": "https://github.com/vcnyutgf/vcnyutgf/tree/main",
+  "repository": "https://github.com/vcnyutgf/vcnyutgf/tree/main",
+  "stack": "container",
+  "features": [
+    "runtime-dyno-metadata"
+  ]
 }
